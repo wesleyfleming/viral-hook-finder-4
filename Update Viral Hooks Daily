@@ -1,0 +1,69 @@
+.github/workflows/update-hooks.yml
+on:
+  schedule:
+    # Runs every day at 9 AM UTC (adjust timezone as needed)
+    - cron: '0 9 * * *'
+  
+  # Allows you to run manually from Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-hooks:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: 📦 Install dependencies
+        run: |
+          pip install requests openai yt-dlp pandas schedule python-dotenv beautifulsoup4
+      
+      - name: 🔍 Run hook finder for multiple niches
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "🎯 Searching for viral hooks..."
+          python3 demo_hook_finder.py fitness
+          python3 demo_hook_finder.py marketing
+          python3 demo_hook_finder.py "B2B Videos"
+          python3 demo_hook_finder.py cooking
+          python3 demo_hook_finder.py tech
+          echo "✅ Hook search complete!"
+      
+      - name: 🔗 Combine all hooks
+        run: |
+          echo "🔗 Combining hooks into master database..."
+          python3 combine_hooks.py
+          echo "✅ Hooks combined!"
+      
+      - name: 📊 Prepare data for API
+        run: |
+          mkdir -p data
+          cp combined_hooks.json data/latest_all.json
+          echo "📅 Last updated: $(date)" > data/last_update.txt
+          echo "✅ Data prepared for deployment!"
+      
+      - name: 📝 Commit and push updates
+        run: |
+          git config --global user.name 'Viral Hook Finder Bot'
+          git config --global user.email 'bot@viralhookfinder.com'
+          git add data/
+          git add hook_database/
+          git diff --staged --quiet || git commit -m "🤖 Auto-update hooks - $(date +'%Y-%m-%d %H:%M')"
+          git push || echo "No changes to push"
+      
+      - name: 🎉 Summary
+        run: |
+          echo "================================"
+          echo "✅ Automation Complete!"
+          echo "================================"
+          echo "📊 Hooks updated and deployed"
+          echo "🌐 Netlify will auto-deploy in ~2 minutes"
+          echo "🔗 Check: https://viralhookfinder4.netlify.app"
+          echo "================================"
