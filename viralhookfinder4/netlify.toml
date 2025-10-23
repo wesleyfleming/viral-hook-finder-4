@@ -6,9 +6,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-```
-
-4. **Commit changes**
-5. **Wait 1-2 minutes** for Netlify to redeploy
-
----
