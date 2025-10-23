@@ -1,35 +1,32 @@
-# Netlify Configuration
-# This file tells Netlify how to build and deploy your site
-
 [build]
-  # The directory with your site's source files
   publish = "."
-  
-  # Build command (not needed for static HTML)
-  command = "echo 'No build needed for static site'"
+  functions = "netlify/functions"
 
-# Redirect rules
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+```
 
-# Headers for security and performance
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    
-# Cache static assets
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+4. **Commit changes**
+5. **Wait 1-2 minutes** for Netlify to redeploy
+
+---
+
+### Option 3: Redeploy Everything via Drag & Drop
+
+Sometimes the easiest fix is to redeploy:
+
+1. **Delete your current Netlify site** (optional, but clean)
+2. **Go to app.netlify.com/drop**
+3. **Drag your entire folder** with this structure:
+```
+   viral-hook-finder/
+   ├── index.html
+   ├── styles.css
+   ├── script.js
+   ├── netlify.toml
+   └── netlify/
+       └── functions/
+           ├── search-hooks.js
+           └── log-search.js
