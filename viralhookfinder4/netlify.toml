@@ -12,21 +12,3 @@
 5. **Wait 1-2 minutes** for Netlify to redeploy
 
 ---
-
-### Option 3: Redeploy Everything via Drag & Drop
-
-Sometimes the easiest fix is to redeploy:
-
-1. **Delete your current Netlify site** (optional, but clean)
-2. **Go to app.netlify.com/drop**
-3. **Drag your entire folder** with this structure:
-```
-   viral-hook-finder/
-   ├── index.html
-   ├── styles.css
-   ├── script.js
-   ├── netlify.toml
-   └── netlify/
-       └── functions/
-           ├── search-hooks.js
-           └── log-search.js
