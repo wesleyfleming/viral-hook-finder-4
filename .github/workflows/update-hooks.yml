@@ -40,16 +40,16 @@ jobs:
       
       - name: Prepare data for API
         run: |
-          mkdir -p data
-          cp combined_hooks.json data/latest_all.json
-          echo "Last updated: $(date)" > data/last_update.txt
+          mkdir -p viralhookfinder4/data
+          cp combined_hooks.json viralhookfinder4/data/latest_all.json
+          echo "Last updated: $(date)" > viralhookfinder4/data/last_update.txt
           echo "Data prepared!"
       
       - name: Commit and push updates
         run: |
           git config --global user.name 'Hook Finder Bot'
           git config --global user.email 'bot@viralhookfinder.com'
-          git add data/
+          git add viralhookfinder4/data/
           git add hook_database/
           git diff --staged --quiet || git commit -m "Auto-update hooks - $(date +'%Y-%m-%d')"
           git push || echo "No changes to push"
