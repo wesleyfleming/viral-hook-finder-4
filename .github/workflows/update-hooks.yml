@@ -43,6 +43,7 @@ jobs:
           mkdir -p viralhookfinder4/data
           cp combined_hooks.json viralhookfinder4/data/latest_all.json
           echo "Last updated: $(date)" > viralhookfinder4/data/last_update.txt
+          ls -la viralhookfinder4/data/
           echo "Data prepared!"
       
       - name: Commit and push updates
