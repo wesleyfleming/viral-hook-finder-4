@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
         
         // Try to load real data
         try {
-            const dataPath = path.join(__dirname, '../../data/latest_all.json');
+            const dataPath = path.join(__dirname, '../data/latest_all.json');
             if (fs.existsSync(dataPath)) {
                 const realData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
                 
@@ -60,7 +60,7 @@ exports.handler = async (event, context) => {
         // Get last update time
         let lastUpdate = null;
         try {
-            const updatePath = path.join(__dirname, '../../data/last_update.txt');
+            const updatePath = path.join(__dirname, '../data/last_update.txt');
             if (fs.existsSync(updatePath)) {
                 lastUpdate = fs.readFileSync(updatePath, 'utf8').trim();
             }
