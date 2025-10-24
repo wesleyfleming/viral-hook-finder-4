@@ -1,30 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Fallback sample data (always available)
-const SAMPLE_HOOKS_DB = {
-    "fitness": [
-        {
-            "platform": "instagram",
-            "views": 450000,
-            "engagement_rate": 7.97,
-            "hook_transcript": "What if I told you this one exercise burns more fat than running?",
-            "patterns": ["question", "curiosity_gap"],
-            "emotional_trigger": "curiosity"
-        }
-    ],
-    "marketing": [
-        {
-            "platform": "tiktok",
-            "views": 650000,
-            "engagement_rate": 14.05,
-            "hook_transcript": "I went from 0 to 100k followers in 3 months using this one strategy",
-            "patterns": ["transformation", "number_based"],
-            "emotional_trigger": "inspiration"
-        }
-    ]
-};
-
 exports.handler = async (event, context) => {
     const headers = {
         'Access-Control-Allow-Origin': '*',
@@ -46,9 +22,9 @@ exports.handler = async (event, context) => {
         console.log('Search request:', { niche, platform, minViews });
 
         let hooks = [];
-        let dataSource = 'sample';
+        let dataSource = 'real';
         
-        // Try to load real data first
+        // Try to load real data
         try {
             const dataPath = path.join(__dirname, '../../data/latest_all.json');
             if (fs.existsSync(dataPath)) {
@@ -61,18 +37,11 @@ exports.handler = async (event, context) => {
                 
                 if (realData[nicheKey] && realData[nicheKey].length > 0) {
                     hooks = realData[nicheKey];
-                    dataSource = 'real';
                     console.log(`Using real data: ${hooks.length} hooks for ${niche}`);
                 }
             }
         } catch (error) {
-            console.log('Real data not available, using sample data:', error.message);
-        }
-        
-        // Fallback to sample data if no real data found
-        if (hooks.length === 0) {
-            hooks = SAMPLE_HOOKS_DB[niche] || SAMPLE_HOOKS_DB['fitness'] || [];
-            console.log(`Using sample data: ${hooks.length} hooks for ${niche}`);
+            console.log('Error loading data:', error.message);
         }
 
         // Filter by platform
