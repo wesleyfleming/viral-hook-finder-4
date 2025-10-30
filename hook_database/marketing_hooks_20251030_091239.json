@@ -1,0 +1,43 @@
+[
+  {
+    "platform": "instagram",
+    "url": "https://instagram.com/reel/marketing1",
+    "views": 385000,
+    "likes": 31000,
+    "comments": 920,
+    "engagement_rate": 8.29,
+    "date": "2024-10-16",
+    "caption": "The email marketing mistake costing you thousands",
+    "owner": "marketing_pro",
+    "hook_transcript": "The email marketing mistake that's costing you thousands every month",
+    "patterns": [
+      "problem_agitation",
+      "shocking_stat",
+      "curiosity_gap"
+    ],
+    "emotional_trigger": "fear",
+    "urgency_score": 8,
+    "curiosity_score": 9
+  },
+  {
+    "platform": "tiktok",
+    "url": "https://tiktok.com/@user/video/789",
+    "views": 650000,
+    "likes": 89000,
+    "comments": 2300,
+    "engagement_rate": 14.05,
+    "date": "2024-10-21",
+    "caption": "I went from 0 to 100k followers in 3 months using this strategy",
+    "owner": "growth_hacker",
+    "hook_transcript": "I went from 0 to 100k followers in 3 months using this one strategy",
+    "patterns": [
+      "personal_story",
+      "number_based",
+      "transformation",
+      "curiosity_gap"
+    ],
+    "emotional_trigger": "inspiration",
+    "urgency_score": 5,
+    "curiosity_score": 10
+  }
+]
