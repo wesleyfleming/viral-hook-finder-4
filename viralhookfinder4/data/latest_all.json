@@ -807,6 +807,107 @@
       "emotional_trigger": "curiosity",
       "urgency_score": 4,
       "curiosity_score": 9
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/reel/example1",
+      "video_url": null,
+      "views": 450000,
+      "likes": 35000,
+      "comments": 890,
+      "engagement_rate": 7.97,
+      "date": "2024-10-15",
+      "caption": "What if I told you this one exercise burns more fat than running?",
+      "owner": "fitness_expert",
+      "hook_transcript": "What if I told you this one exercise burns more fat than running?",
+      "patterns": [
+        "question",
+        "curiosity_gap",
+        "shocking_stat"
+      ],
+      "emotional_trigger": "curiosity",
+      "urgency_score": 2,
+      "curiosity_score": 8
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@user/video/123",
+      "views": 780000,
+      "likes": 95000,
+      "comments": 2100,
+      "engagement_rate": 12.44,
+      "date": "2024-10-18",
+      "caption": "Stop wasting money on supplements. Here's what actually works...",
+      "owner": "fitcoach_official",
+      "hook_transcript": "Stop wasting money on supplements. Here's what actually works",
+      "patterns": [
+        "urgency",
+        "problem_agitation",
+        "curiosity_gap"
+      ],
+      "emotional_trigger": "frustration",
+      "urgency_score": 9,
+      "curiosity_score": 7
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/reel/example3",
+      "views": 320000,
+      "likes": 28000,
+      "comments": 650,
+      "engagement_rate": 8.91,
+      "date": "2024-10-20",
+      "caption": "I used to struggle with meal prep until I discovered this hack",
+      "owner": "healthy_meals",
+      "hook_transcript": "I used to struggle with meal prep until I discovered this hack",
+      "patterns": [
+        "personal_story",
+        "transformation",
+        "curiosity_gap"
+      ],
+      "emotional_trigger": "hope",
+      "urgency_score": 3,
+      "curiosity_score": 8
+    },
+    {
+      "platform": "youtube",
+      "url": "https://youtube.com/shorts/abc123",
+      "views": 920000,
+      "likes": 125000,
+      "comments": 3400,
+      "engagement_rate": 13.96,
+      "date": "2024-10-19",
+      "caption": "3 mistakes killing your progress in the gym",
+      "owner": "gym_secrets",
+      "hook_transcript": "3 mistakes killing your progress in the gym (you're probably doing number 2)",
+      "patterns": [
+        "number_based",
+        "negative",
+        "curiosity_gap"
+      ],
+      "emotional_trigger": "fear",
+      "urgency_score": 6,
+      "curiosity_score": 9
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@user/video/456",
+      "views": 560000,
+      "likes": 72000,
+      "comments": 1800,
+      "engagement_rate": 13.18,
+      "date": "2024-10-17",
+      "caption": "Nobody tells you this about building muscle after 40",
+      "owner": "over40fitness",
+      "hook_transcript": "Nobody tells you this about building muscle after 40",
+      "patterns": [
+        "controversy",
+        "curiosity_gap",
+        "age_specific"
+      ],
+      "emotional_trigger": "curiosity",
+      "urgency_score": 4,
+      "curiosity_score": 9
     }
   ],
   "marketing": [
@@ -1137,9 +1238,151 @@
       "emotional_trigger": "inspiration",
       "urgency_score": 5,
       "curiosity_score": 10
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/reel/marketing1",
+      "views": 385000,
+      "likes": 31000,
+      "comments": 920,
+      "engagement_rate": 8.29,
+      "date": "2024-10-16",
+      "caption": "The email marketing mistake costing you thousands",
+      "owner": "marketing_pro",
+      "hook_transcript": "The email marketing mistake that's costing you thousands every month",
+      "patterns": [
+        "problem_agitation",
+        "shocking_stat",
+        "curiosity_gap"
+      ],
+      "emotional_trigger": "fear",
+      "urgency_score": 8,
+      "curiosity_score": 9
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@user/video/789",
+      "views": 650000,
+      "likes": 89000,
+      "comments": 2300,
+      "engagement_rate": 14.05,
+      "date": "2024-10-21",
+      "caption": "I went from 0 to 100k followers in 3 months using this strategy",
+      "owner": "growth_hacker",
+      "hook_transcript": "I went from 0 to 100k followers in 3 months using this one strategy",
+      "patterns": [
+        "personal_story",
+        "number_based",
+        "transformation",
+        "curiosity_gap"
+      ],
+      "emotional_trigger": "inspiration",
+      "urgency_score": 5,
+      "curiosity_score": 10
     }
   ],
   "fitness": [
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/reel/example1",
+      "video_url": null,
+      "views": 450000,
+      "likes": 35000,
+      "comments": 890,
+      "engagement_rate": 7.97,
+      "date": "2024-10-15",
+      "caption": "What if I told you this one exercise burns more fat than running?",
+      "owner": "fitness_expert",
+      "hook_transcript": "What if I told you this one exercise burns more fat than running?",
+      "patterns": [
+        "question",
+        "curiosity_gap",
+        "shocking_stat"
+      ],
+      "emotional_trigger": "curiosity",
+      "urgency_score": 2,
+      "curiosity_score": 8
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@user/video/123",
+      "views": 780000,
+      "likes": 95000,
+      "comments": 2100,
+      "engagement_rate": 12.44,
+      "date": "2024-10-18",
+      "caption": "Stop wasting money on supplements. Here's what actually works...",
+      "owner": "fitcoach_official",
+      "hook_transcript": "Stop wasting money on supplements. Here's what actually works",
+      "patterns": [
+        "urgency",
+        "problem_agitation",
+        "curiosity_gap"
+      ],
+      "emotional_trigger": "frustration",
+      "urgency_score": 9,
+      "curiosity_score": 7
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/reel/example3",
+      "views": 320000,
+      "likes": 28000,
+      "comments": 650,
+      "engagement_rate": 8.91,
+      "date": "2024-10-20",
+      "caption": "I used to struggle with meal prep until I discovered this hack",
+      "owner": "healthy_meals",
+      "hook_transcript": "I used to struggle with meal prep until I discovered this hack",
+      "patterns": [
+        "personal_story",
+        "transformation",
+        "curiosity_gap"
+      ],
+      "emotional_trigger": "hope",
+      "urgency_score": 3,
+      "curiosity_score": 8
+    },
+    {
+      "platform": "youtube",
+      "url": "https://youtube.com/shorts/abc123",
+      "views": 920000,
+      "likes": 125000,
+      "comments": 3400,
+      "engagement_rate": 13.96,
+      "date": "2024-10-19",
+      "caption": "3 mistakes killing your progress in the gym",
+      "owner": "gym_secrets",
+      "hook_transcript": "3 mistakes killing your progress in the gym (you're probably doing number 2)",
+      "patterns": [
+        "number_based",
+        "negative",
+        "curiosity_gap"
+      ],
+      "emotional_trigger": "fear",
+      "urgency_score": 6,
+      "curiosity_score": 9
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@user/video/456",
+      "views": 560000,
+      "likes": 72000,
+      "comments": 1800,
+      "engagement_rate": 13.18,
+      "date": "2024-10-17",
+      "caption": "Nobody tells you this about building muscle after 40",
+      "owner": "over40fitness",
+      "hook_transcript": "Nobody tells you this about building muscle after 40",
+      "patterns": [
+        "controversy",
+        "curiosity_gap",
+        "age_specific"
+      ],
+      "emotional_trigger": "curiosity",
+      "urgency_score": 4,
+      "curiosity_score": 9
+    },
     {
       "platform": "instagram",
       "url": "https://instagram.com/reel/example1",
